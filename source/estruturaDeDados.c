@@ -9,11 +9,13 @@ int InseririElementos(tLista *inicio, tLista *elemeto){
 
 	if(inicio->next!= NULL){
 		inicio->next = novo;
-		novo->next = ptrAux;
+		novo->next = ptrAux->next;
+		
 		return 1;
 	}else{
-		inicio->next = novo;
-		novo->next = NULL;
+		inicio = novo;
+		inicio->next = NULL;
+		
 		return 1;
 	}
 

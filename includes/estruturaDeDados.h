@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 #define TAM_PALAVRA 40
-#define TAM_BUCKETS 0
+//#define TAM_BUCKETS 0
 
 
 typedef struct NO {

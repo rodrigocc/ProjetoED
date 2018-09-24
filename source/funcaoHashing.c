@@ -17,8 +17,8 @@ int ChaveString(char *str, int tamanhoDeBucktes){
 
 	return valor;
 }
-
 */
+
 
 int hash(char * str, int tamanhoBucktes){
 
