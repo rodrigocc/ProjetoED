@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 #include "arquivo.h"
+#include "funcaoHashing.h"
+#include "estruturaDeDados.h"
 
 
 

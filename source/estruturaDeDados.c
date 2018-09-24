@@ -1,39 +1,34 @@
-#include "estruturaDeDados"
+#include "estruturaDeDados.h"
 
 
+int InseririElementos(tLista *inicio, tLista *elemeto){
+	tLista *ptrAux = inicio;
 
+	tLista *novo = (tLista*) malloc(sizeof(tLista));
+	*novo = *elemeto;
 
-
-
-int CriariaLista(){
-	
-}
-
-
-
-int InseririElementos(tlista *inicio, tlista *elemeto){
-	tlista *ptrAux = inicio;
-
-	if(inicio){
-		inicio = elemeto;
-		elemeto->next = ptrAux;
-
+	if(inicio->next!= NULL){
+		inicio->next = novo;
+		novo->next = ptrAux;
+		return 1;
 	}else{
-		return 0;
+		inicio->next = novo;
+		novo->next = NULL;
+		return 1;
 	}
 
 }
 
 
-tlista* PercorrerLista(tlista *inicio, tlista *ptrElemento){
+tLista* PercorrerLista(tLista *inicio, tLista *ptrElemento){
 	
-	tlista *ptrAux=inicio;
+	tLista *ptrAux = inicio;
 	while(1){
 
-		if(ptrAux->next == NULL){
+		if(ptrAux == NULL){
 			return NULL;
-		}else if( ptrAux->next == ptrElemento){
-			return ptrAux->next;
+		}else if( ptrAux == ptrElemento){
+			return ptrAux;
 		}
 
 
@@ -44,3 +39,11 @@ tlista* PercorrerLista(tlista *inicio, tlista *ptrElemento){
 	return NULL;
 }
 
+
+int CriariaLista(){
+
+
+
+
+
+}
