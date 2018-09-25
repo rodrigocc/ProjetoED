@@ -2,22 +2,23 @@
 
 
 int InseririElementos(tLista *inicio, tLista *elemeto){
-	tLista *ptrAux = inicio;
 
-	tLista *novo = (tLista*) malloc(sizeof(tLista));
+	tLista *ptrAux = inicio;
+	tLista *novo;
+
+	//printf("%p\n", inicio);
+	novo = (tLista*) malloc(sizeof(tLista));
 	*novo = *elemeto;
 
 	if(inicio != NULL){
-		inicio = novo;
-		inicio->next = ptrAux;
-		puts("se não for null");
+		inicio->next = novo;
+		novo->
 
 		return 1;
-	}else{
-		puts(" aqui NUll");
+	}else if(inicio == NULL){
+
 		inicio = novo;
 		inicio->next = NULL;
-		
 		return 1;
 	}
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TAM_BUCKTS  100000
+#define TAM_BUCKTS  1
 
 #include "arquivo.h"
 #include "funcaoHashing.h"
@@ -35,13 +35,12 @@ int main(int argc, char* argv[]){
 
         if(LerPalavra(streamArquivoDict, palavra, TAM_PALAVRA)){
             break;
-
         }
+
 
         valorHash = hash(palavra, TAM_BUCKTS); 
         OrganizaDicionario(buckt[valorHash], valorHash, palavra); 
-        
-        printf("%p\n", buckt[valorHash]); //teste
+
     }
 
 
