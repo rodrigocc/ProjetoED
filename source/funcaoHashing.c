@@ -29,11 +29,10 @@ int hash(const char * str, int tamanhoBucktes){
 
 	for(i = 0; str[i] != '\0'; i++){
 		
-		chave = 31 * chave + (int)str[i];
-		
+		chave = 31 * chave + (str[i]);		
 	}
 		
-	return posicaoHash = (chave % tamanhoBucktes);
+	return abs(posicaoHash = (chave % tamanhoBucktes));
 
 }
 

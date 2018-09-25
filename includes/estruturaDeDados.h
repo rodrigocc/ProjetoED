@@ -26,6 +26,5 @@ int PercorrerLista(tLista *inicio, const char *palavra);
 
 int InseririElementos(tLista *inicio, tLista *elemeto);
 
-int CriariaLista();
 
 #endif

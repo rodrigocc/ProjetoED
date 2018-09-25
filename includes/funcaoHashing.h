@@ -3,6 +3,7 @@
 
 #include "estruturaDeDados.h"
 #include <string.h>
+#include <math.h>
 
 //
 // Created by rodrigo on 23/09/18.

@@ -10,10 +10,11 @@ int InseririElementos(tLista *inicio, tLista *elemeto){
 	if(inicio != NULL){
 		inicio = novo;
 		inicio->next = ptrAux;
-		
+		puts("se não for null");
+
 		return 1;
 	}else{
-		
+		puts(" aqui NUll");
 		inicio = novo;
 		inicio->next = NULL;
 		
@@ -24,7 +25,6 @@ int InseririElementos(tLista *inicio, tLista *elemeto){
 
 
 int PercorrerLista(tLista *inicio, const char *palavra){
-	
 	tLista *ptrAux = inicio;
 	
 	while(1){
@@ -38,7 +38,5 @@ int PercorrerLista(tLista *inicio, const char *palavra){
  		}
 
 		ptrAux = ptrAux->next;
-
 	}
-
 }
