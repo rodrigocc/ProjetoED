@@ -19,7 +19,6 @@ int main(int argc, char* argv[]){
 
     for (i = 0; i < TAM_BUCKTS; i++)
     {
-
         buckt[i]= NULL;
     }
 
@@ -31,7 +30,7 @@ int main(int argc, char* argv[]){
         flag = LerPalavra(streamArquivoDict, palavra, TAM_PALAVRA);
         valorHash = hash(palavra); // suposição de função
 
-        OrganizaDicionario(buckt, valorHash, palavra); // suposição
+        OrganizaDicionario(buckt[valorHash], valorHash, palavra); // suposição
 
         if(flag){
     		break;

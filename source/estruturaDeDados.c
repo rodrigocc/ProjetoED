@@ -7,12 +7,13 @@ int InseririElementos(tLista *inicio, tLista *elemeto){
 	tLista *novo = (tLista*) malloc(sizeof(tLista));
 	*novo = *elemeto;
 
-	if(inicio->next!= NULL){
-		inicio->next = novo;
-		novo->next = ptrAux->next;
+	if(inicio != NULL){
+		inicio = novo;
+		inicio->next = ptrAux;
 		
 		return 1;
 	}else{
+		
 		inicio = novo;
 		inicio->next = NULL;
 		

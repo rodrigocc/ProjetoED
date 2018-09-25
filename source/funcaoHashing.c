@@ -19,7 +19,7 @@ int ChaveString(char *str, int tamanhoDeBucktes){
 }
 */
 
-
+/*
 int hash(char * str, int tamanhoBucktes){
 	int i, posicaoHash;
 	int chave = 7
@@ -40,7 +40,68 @@ int MultiplicaPosicaoHash(//Seria o Hash Gerado Pela FunçãoHash// int tamanhoB
 	float A = 0.718033
 	float val = //hASH * A;
 	val = val - (int)val;
-	return(int) (tamanhoBuckets * val);
+	return (int) (tamanhoBuckets * val);
 
 }
+*/
+
+//
+
+OrganizaDicionario(tLista *buckt, int valorHash,  char *palavra){
+	tLista elemento;
+
+	elemento.valorHash = valorHash;
+	strcpy(elemento.palavra, palavra);
+
+	InseririElementos(buckt, &elemento);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
