@@ -20,6 +20,7 @@ int LerPalavra(FILE *stream, char *palavra, int tamanho){
 	}
 }
 
+
 /*
 int GerarResultado(FILE *stream, tResultado *resultado, char *diretorio){
 	int i;

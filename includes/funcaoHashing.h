@@ -2,17 +2,15 @@
 #define HASH_FUNCAO_H 
 
 #include "estruturaDeDados.h"
+#include <string.h>
 
 //
 // Created by rodrigo on 23/09/18.
 
-int ChaveString();
+void OrganizaDicionario(tLista *buckt, int valorHash,  char *palavra);
 
+int VerificaPalavra(tLista * cabeca, char *palavra);// suposição
 
-OrganizaDicionario(tLista *buckt, int valorHash,  char *palavra);
-
-VerificaPalavra(buckt, valorHash);// suposição
-
-int hash(char * str, int tamanhoBucktes);
+int hash(const char * str, int tamanhoBucktes);
 
 #endif

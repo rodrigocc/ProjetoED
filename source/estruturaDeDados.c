@@ -23,30 +23,22 @@ int InseririElementos(tLista *inicio, tLista *elemeto){
 }
 
 
-tLista* PercorrerLista(tLista *inicio, tLista *ptrElemento){
+int PercorrerLista(tLista *inicio, const char *palavra){
 	
 	tLista *ptrAux = inicio;
+	
 	while(1){
 
 		if(ptrAux == NULL){
-			return NULL;
-		}else if( ptrAux == ptrElemento){
-			return ptrAux;
-		}
-
+			return 0;
+		
+		}else if(!strcmp(ptrAux->palavra, palavra)){			
+			
+			return 1; 
+ 		}
 
 		ptrAux = ptrAux->next;
 
 	}
-
-	return NULL;
-}
-
-
-int CriariaLista(){
-
-
-
-
 
 }

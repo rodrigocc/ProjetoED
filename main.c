@@ -23,12 +23,16 @@ int main(int argc, char* argv[]){
     }
 
 // Primeira parte, Calculo de hash do dicionario
+    
     printf("Carregando o dicionario!\n");
     streamArquivoDict = fopen(argv[1], "r");
 
     while(1){
+
         flag = LerPalavra(streamArquivoDict, palavra, TAM_PALAVRA);
-        valorHash = hash(palavra); // suposição de função
+        valorHash = hash(palavra, TAM_BUCKTS); // suposição de função
+        
+        printf("%d\n %s\n\n", valorHash, palavra);
 
         OrganizaDicionario(buckt[valorHash], valorHash, palavra); // suposição
 
@@ -37,6 +41,9 @@ int main(int argc, char* argv[]){
     	}    
     }
 
+
+
+
 // Segunda parte, spell checker
     printf("Carregando texto teste!\n");
     textoTeste = fopen(argv[1], "r");
@@ -44,10 +51,9 @@ int main(int argc, char* argv[]){
     while (1)
     {
         flag = LerPalavra(textoTeste, palavra, TAM_PALAVRA);
-        valorHash = hash(palavra); // suposição de função
+        valorHash = hash(palavra, TAM_BUCKTS); // suposição de função
 
-        VerificaPalavra(buckt, valorHash);// suposição
-
+        VerificaPalavra(buckt[valorHash], palavra);// suposição
 
         if (flag)
         {
@@ -55,7 +61,10 @@ int main(int argc, char* argv[]){
         }
     }
 
+
     //GerarResultado();
 
+
+
     return 0;
-}
+}// fim da main

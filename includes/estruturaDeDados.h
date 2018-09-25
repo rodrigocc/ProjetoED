@@ -2,6 +2,7 @@
 #define ESTRUTURAS_DE_DADOS_H
 
 #include <stdlib.h>
+#include <string.h>
 
 #define TAM_PALAVRA 40
 //#define TAM_BUCKETS 0
@@ -21,8 +22,10 @@ typedef struct NO {
 
 //typedef NO lista;
 
-tLista *PercorrerLista(tLista *inicio, tLista *ptrElemento);
+int PercorrerLista(tLista *inicio, const char *palavra);
+
 int InseririElementos(tLista *inicio, tLista *elemeto);
+
 int CriariaLista();
 
 #endif
