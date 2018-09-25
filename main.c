@@ -37,12 +37,13 @@ int main(int argc, char* argv[]){
             break;
         }
 
-
         valorHash = hash(palavra, TAM_BUCKTS); 
+        
         OrganizaDicionario(buckt[valorHash], valorHash, palavra); 
 
     }
 
+   
 
 
 // Segunda parte, spell checker

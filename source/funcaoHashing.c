@@ -10,7 +10,6 @@ void OrganizaDicionario(tLista *buckt, int valorHash,  char *palavra){
 
 	InseririElementos(buckt, &elemento);
 
-
 }
 
 int VerificaPalavra(tLista * cabeca, char *palavra){

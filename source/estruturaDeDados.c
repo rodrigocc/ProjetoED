@@ -2,20 +2,22 @@
 
 
 int InseririElementos(tLista *inicio, tLista *elemeto){
+	int i=0;
 
 	tLista *ptrAux = inicio;
 	tLista *novo;
 
-	//printf("%p\n", inicio);
 	novo = (tLista*) malloc(sizeof(tLista));
 	*novo = *elemeto;
 
 	if(inicio != NULL){
+		novo->next = inicio->next;
 		inicio->next = novo;
-		novo->
 
+		printf("%d\n", i++);
 		return 1;
-	}else if(inicio == NULL){
+
+	}else{
 
 		inicio = novo;
 		inicio->next = NULL;
@@ -27,7 +29,8 @@ int InseririElementos(tLista *inicio, tLista *elemeto){
 
 int PercorrerLista(tLista *inicio, const char *palavra){
 	tLista *ptrAux = inicio;
-	
+	int i;
+
 	while(1){
 
 		if(ptrAux == NULL){
@@ -38,6 +41,9 @@ int PercorrerLista(tLista *inicio, const char *palavra){
 			return 1; 
  		}
 
+ 		printf("%d\n",i++);
 		ptrAux = ptrAux->next;
 	}
+
+
 }
